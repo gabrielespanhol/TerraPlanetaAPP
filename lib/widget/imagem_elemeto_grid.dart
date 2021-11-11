@@ -11,7 +11,7 @@ class ImagemElementoGridIndicador extends StatelessWidget {
     return Positioned.fill(
       child: Image(
         fit: BoxFit.cover,
-        image: AssetImage('assets/imagens/$imagem')),
+        image: AssetImage('assets/images/$imagem')),
     );
   }
 }

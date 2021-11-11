@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
 import 'package:thefive_planetaagua/widget/grid_Indicadores.dart';
 
-class Menu extends StatefulWidget {
+class IndicadorReal extends StatefulWidget {
   @override
-  _MenuState createState() => _MenuState();
+  _IndicadorRealState createState() => _IndicadorRealState();
 }
 
-class _MenuState extends State<Menu> {
+class _IndicadorRealState extends State<IndicadorReal> {
   final List moveis = [
     {
       "titulo": "Mesa",
@@ -36,27 +36,6 @@ class _MenuState extends State<Menu> {
       "foto": "movel4.jpg",
       "descricao":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam libero id mauris mollis convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-    },
-    {
-      "titulo": "Mesa de cabeceira",
-      "preco": 400,
-      "foto": "movel5.jpg",
-      "descricao":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam libero id mauris mollis convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-    },
-    {
-      "titulo": "Jogo de Cama",
-      "preco": 250,
-      "foto": "movel6.jpg",
-      "descricao":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam libero id mauris mollis convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-    },
-    {
-      "titulo": "Sofá Branco",
-      "preco": 900,
-      "foto": "movel7.jpg",
-      "descricao":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam libero id mauris mollis convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
     }
   ];
 
@@ -65,7 +44,7 @@ class _MenuState extends State<Menu> {
     return Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBarCustomizada(
-          titulo: 'Menu',
+          titulo: 'RELATÓRIO EM TEMPO REAL',
         ),
         body: Column(
           children: [
@@ -76,7 +55,7 @@ class _MenuState extends State<Menu> {
                         margin: EdgeInsets.only(
                             left: 30, right: 20, top: 10, bottom: 10),
                         child: Divider())),
-                Text('Produtos'),
+                
                 Expanded(
                     child: Container(
                         margin: EdgeInsets.only(

@@ -40,7 +40,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 Padding(
                   padding: const EdgeInsets.only(top: 60, bottom: 30),
                   child: Text("RELATÓRIOS", style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 27,
                     color: Colors.grey.shade600,
                     fontWeight: FontWeight.bold,
                   ),
@@ -57,15 +57,23 @@ class _MenuScreenState extends State<MenuScreen> {
                 ItemMenu(titulo: 'RELATORIO COM BASE HISTÓRICA', caminho: '/relatorioHist',),
                 ItemMenu(titulo: 'INTEGRANTES', caminho: '/integrantes',),
                 
-                Container(
-                      width: 250,
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage("assets/images/terra.png"),
-                          fit: BoxFit.cover,
+              SizedBox(
+                  height: 155.0,
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: Container(
+                        width: 140,
+                        decoration: new BoxDecoration(
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/images/terra.png"),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
+                  ),
+                ),
               ],
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/widget/item_menu.dart';
+import 'package:thefive_planetaagua/widget/the_five.dart';
 
 class MenuScreen extends StatefulWidget {
 
@@ -72,8 +73,9 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                     ),
-                  ),
+                  ),   
                 ),
+                TheFive(),
               ],
             ),
           ),

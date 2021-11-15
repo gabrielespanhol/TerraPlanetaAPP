@@ -20,7 +20,7 @@ class AppBarCustomizada extends StatelessWidget with PreferredSizeWidget {
         titulo,
         style: TextStyle(color: Colors.black),
       ),
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       elevation: 0.0,
       centerTitle: true,
     );

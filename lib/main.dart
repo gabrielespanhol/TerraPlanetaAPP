@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/paleta_cores.dart';
-import 'package:thefive_planetaagua/screens/indigadores_screen.dart';
+import 'package:thefive_planetaagua/screens/indigadores_real_screen.dart';
 import 'package:thefive_planetaagua/screens/login_screen.dart';
 import 'package:thefive_planetaagua/screens/menu_screen.dart';
 import 'package:thefive_planetaagua/screens/password_screen.dart';

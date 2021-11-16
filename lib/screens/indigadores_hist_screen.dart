@@ -63,14 +63,14 @@ class _IndicadorHistState extends State<IndicadorHist> {
                 Row(
                   children: <Widget>[
 
-                        ItemIndicador(caminho: "/",nome: "PH",),
+                        ItemIndicador(caminho: "/indicadorHistPH",nome: "PH",),
 
-                        ItemIndicador(caminho: "/",nome: "CO2",),
+                        ItemIndicador(caminho: "/indicadorHistCO2",nome: "CO2",),
                         
                       
                   ],
                 ),
-                Center(child: ItemIndicador(caminho: "/",nome: "PH/CO2")),
+                Center(child: ItemIndicador(caminho: "/indicadorHistPHCO2",nome: "PH/CO2")),
                 
                 Padding(
                   padding: const EdgeInsets.only(top: 55),

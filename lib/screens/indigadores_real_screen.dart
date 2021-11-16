@@ -63,14 +63,14 @@ class _IndicadorRealState extends State<IndicadorReal> {
                 Row(
                   children: <Widget>[
 
-                        ItemIndicador(caminho: "/indicadorPH",nome: "PH",),
+                        ItemIndicador(caminho: "/indicadorRealPH",nome: "PH",),
 
-                        ItemIndicador(caminho: "/",nome: "CO2",),
+                        ItemIndicador(caminho: "/indicadorRealCO2",nome: "CO2",),
                         
                       
                   ],
                 ),
-                Center(child: ItemIndicador(caminho: "/",nome: "PH/CO2")),
+                Center(child: ItemIndicador(caminho: "/indicadorRealPHCO2",nome: "PH/CO2")),
                 
                 Padding(
                   padding: const EdgeInsets.only(top: 55),

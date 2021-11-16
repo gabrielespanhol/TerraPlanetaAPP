@@ -3,12 +3,12 @@ import 'package:thefive_planetaagua/widget/appbar.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
 
 
-class IndicadorRealPH extends StatefulWidget {
+class IndicadorRealCO2 extends StatefulWidget {
   @override
-  _IndicadorRealPHState createState() => _IndicadorRealPHState();
+  _IndicadorRealCO2State createState() => _IndicadorRealCO2State();
 }
 
-class _IndicadorRealPHState extends State<IndicadorRealPH> {
+class _IndicadorRealCO2State extends State<IndicadorRealCO2> {
  
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class _IndicadorRealPHState extends State<IndicadorRealPH> {
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
                   child: Center(
-                    child: Text("PH",
+                    child: Text("CO2",
                         style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

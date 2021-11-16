@@ -4,12 +4,12 @@ import 'package:thefive_planetaagua/widget/item_indicador.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
 
 
-class IndicadorReal extends StatefulWidget {
+class IndicadorHist extends StatefulWidget {
   @override
-  _IndicadorRealState createState() => _IndicadorRealState();
+  _IndicadorHistState createState() => _IndicadorHistState();
 }
 
-class _IndicadorRealState extends State<IndicadorReal> {
+class _IndicadorHistState extends State<IndicadorHist> {
  
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _IndicadorRealState extends State<IndicadorReal> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 40, bottom: 30),
-                  child: Text("RELATÓRIO EM TEMPO REAL", style: TextStyle(
+                  child: Text("RELATÓRIO COM BASE HISTÓRICA", style: TextStyle(
                     fontSize: 20,
                     color: Colors.grey.shade600,
                     fontWeight: FontWeight.bold,
@@ -63,7 +63,7 @@ class _IndicadorRealState extends State<IndicadorReal> {
                 Row(
                   children: <Widget>[
 
-                        ItemIndicador(caminho: "/indicadorPH",nome: "PH",),
+                        ItemIndicador(caminho: "/",nome: "PH",),
 
                         ItemIndicador(caminho: "/",nome: "CO2",),
                         

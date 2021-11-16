@@ -6,7 +6,7 @@ import 'package:thefive_planetaagua/screens/integrates_screen.dart';
 import 'package:thefive_planetaagua/screens/login_screen.dart';
 import 'package:thefive_planetaagua/screens/menu_screen.dart';
 import 'package:thefive_planetaagua/screens/password_screen.dart';
-import 'package:thefive_planetaagua/screens/ph_screen.dart';
+import 'package:thefive_planetaagua/screens/ph_real_screen.dart';
 import 'package:thefive_planetaagua/screens/register_screen.dart';
 
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
+import 'package:thefive_planetaagua/widget/co2.dart';
+import 'package:thefive_planetaagua/widget/relatorio_base_hist.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
 
 
@@ -38,30 +40,10 @@ class _IndicadorHistCO2State extends State<IndicadorHistCO2> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text("RELATÓRIO COM BASE\nHISTÓRICA",
-                      style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade600,
-                    ),
-                   ),
-                    )
+                   RelatorioBaseHist(),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Center(
-                    child: Text("CO2",
-                        style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey.shade600,
-                      ),
-                     ),
-                  ),
-                ),
+                RelatorioCO2(),
 
                 // indicador
 

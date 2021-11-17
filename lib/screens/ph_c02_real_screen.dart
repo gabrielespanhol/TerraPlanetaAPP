@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
+import 'package:thefive_planetaagua/widget/ph_co2.dart';
+import 'package:thefive_planetaagua/widget/relatorio_tempo_real.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
 
 
@@ -38,30 +40,10 @@ class _IndicadorRealPHCO2State extends State<IndicadorRealPHCO2> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text("RELATÓRIO EM TEMPO REAL",
-                      style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade600,
-                    ),
-                   ),
-                    )
+                    RelatorioTempoReal(),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Center(
-                    child: Text("PH e CO2",
-                        style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey.shade600,
-                      ),
-                     ),
-                  ),
-                ),
+                RelatorioPHCO2(),
 
                 // indicador
 

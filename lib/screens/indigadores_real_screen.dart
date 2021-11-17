@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
 import 'package:thefive_planetaagua/widget/item_indicador.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
+
 
 
 class IndicadorReal extends StatefulWidget {

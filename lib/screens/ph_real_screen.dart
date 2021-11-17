@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:thefive_planetaagua/screens/teste.dart';
+import 'package:thefive_planetaagua/charts/indicador_charts.dart';
+import 'package:thefive_planetaagua/charts/indicador_series.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
 import 'package:thefive_planetaagua/widget/ph.dart';
 import 'package:thefive_planetaagua/widget/relatorio_tempo_real.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
-import 'package:charts_flutter/flutter.dart';
-
-
 
 class IndicadorRealPH extends StatefulWidget {
   @override
@@ -14,9 +12,14 @@ class IndicadorRealPH extends StatefulWidget {
 }
 
 class _IndicadorRealPHState extends State<IndicadorRealPH> {
+  final List<IndicadorSeries> dados = [
+    IndicadorSeries('2008', 2 ),
+    IndicadorSeries('2009', 3 ),
+    IndicadorSeries('2010', 4 ),
+    IndicadorSeries('2011', 5 ),
+    IndicadorSeries('2012', 6 ),
+  ];
 
-  final List<>
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,13 +51,12 @@ class _IndicadorRealPHState extends State<IndicadorRealPH> {
                     RelatorioTempoReal(),
                   ],
                 ),
-                RelatorioPH(),// indicador
-
-                GraficoTeste(seriesList),
-
-
+                RelatorioPH(), // indicador
+                Center(
+                  child: IndicadorCharts(dados: dados),
+                ),
                 TheFive(),
-              ],              
+              ],
             ),
           ),
         ),

@@ -1,12 +1,21 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 
 class IndicadorSeries {
-  final String year;
-  final int ph;
-  final charts.Color barColor;
+  String month;
+  int ph;
 
-  IndicadorSeries(this.year, this.ph, this.barColor);
+
+  IndicadorSeries({@required this.month, @required this.ph});
+
+  IndicadorSeries.fromJson(Map<String, dynamic> json) {
+    month = json['month'];
+    ph = json['ph'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['month'] = this.month;
+    data['ph'] = this.ph;
+    return data;
+  }
 }

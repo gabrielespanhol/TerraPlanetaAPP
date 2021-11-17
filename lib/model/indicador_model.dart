@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 
 class IndicadorModel {
   String id;
@@ -18,10 +18,6 @@ class IndicadorModel {
     preco = json['preco'];
   }
 
-
-  IndicadorModel IndicadorModelFromMap(String str) => IndicadorModel.fromMap(json.decode(str));
-
-  String IndicadorModelToMap(IndicadorModel data) => json.encode(data.toMap());
 
   factory IndicadorModel.fromMap(Map<String, dynamic> json) => IndicadorModel(
           id: json['id'],

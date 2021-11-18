@@ -73,8 +73,8 @@ class _IndicadorRealPHState extends State<IndicadorRealPH> {
                 ),
                 RelatorioPH(), // indicador
 
-                Container(),
-                IndicadorCharts(dados: dados),
+                Center(child: IndicadorCharts(dados: dados),),
+                
 
                 TheFive(),
               ],

@@ -17,13 +17,13 @@ class _IndicadorRealPHState extends State<IndicadorRealPH> {
   
   final List<IndicadorSeries> dados = [
     IndicadorSeries(year: '1955', dado: 3, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
-    IndicadorSeries(year: '1965', dado: 2, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '1965', dado: 2, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
     IndicadorSeries(year: '1975', dado: 4, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
-    IndicadorSeries(year: '1985', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '1985', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
     IndicadorSeries(year: '1995', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
-    IndicadorSeries(year: '2005', dado: 7, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2005', dado: 7, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
     IndicadorSeries(year: '2010', dado: 5, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
-    IndicadorSeries(year: '2015', dado: 8, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2015', dado: 8, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
     IndicadorSeries(year: '2020', dado: 9, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
   ];
 

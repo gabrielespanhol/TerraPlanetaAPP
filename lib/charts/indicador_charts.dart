@@ -17,14 +17,16 @@ class IndicadorCharts extends StatelessWidget {
       charts.Series(
         id: "Indicadores",
         data: dados,
-        domainFn: (IndicadorSeries series, _) => series.month,
-        measureFn: (IndicadorSeries series, _) => series.ph,
+        domainFn: (IndicadorSeries series, _) => series.year,
+        measureFn: (IndicadorSeries series, _) => series.dado,
+        colorFn: (IndicadorSeries series, _) => series.barColor
       )
     ];
 
     return Container(
-      height: 300,
-      padding: EdgeInsets.all(30),
+      height: 450,
+      width: 550,
+      padding: EdgeInsets.all(10),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -33,6 +35,7 @@ class IndicadorCharts extends StatelessWidget {
               Expanded(child: charts.BarChart(
                 series,
                 animate: true,
+
               ),)
             ],
           ),

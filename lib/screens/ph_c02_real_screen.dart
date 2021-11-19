@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:thefive_planetaagua/charts/indicador_charts.dart';
+import 'package:thefive_planetaagua/charts/indicador_series.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
 import 'package:thefive_planetaagua/widget/ph_co2.dart';
 import 'package:thefive_planetaagua/widget/relatorio_tempo_real.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
 
 
 class IndicadorRealPHCO2 extends StatefulWidget {
@@ -12,6 +15,19 @@ class IndicadorRealPHCO2 extends StatefulWidget {
 
 class _IndicadorRealPHCO2State extends State<IndicadorRealPHCO2> {
  
+  final List<IndicadorSeries> dados = [
+   IndicadorSeries(year: '1955', dado: 3, barColor: charts.ColorUtil.fromDartColor(Colors.red)),
+    IndicadorSeries(year: '1956', dado: 2, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '1985', dado: 4, barColor: charts.ColorUtil.fromDartColor(Colors.red)),
+    IndicadorSeries(year: '1986', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2005', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.red)),
+    IndicadorSeries(year: '2006', dado: 7, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2010', dado: 5, barColor: charts.ColorUtil.fromDartColor(Colors.red)),
+    IndicadorSeries(year: '2011', dado: 8, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2020', dado: 9, barColor: charts.ColorUtil.fromDartColor(Colors.red)),
+    IndicadorSeries(year: '2021', dado: 9, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +63,14 @@ class _IndicadorRealPHCO2State extends State<IndicadorRealPHCO2> {
 
                 // indicador
 
-                TheFive(),
+                Center(
+                  child: IndicadorCharts(dados: dados),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 35),
+                  child: TheFive(),
+                ),
               ],              
             ),
           ),

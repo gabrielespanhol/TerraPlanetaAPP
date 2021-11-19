@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:thefive_planetaagua/charts/indicador_charts.dart';
 import 'package:thefive_planetaagua/charts/indicador_series.dart';
-import 'package:thefive_planetaagua/services/indicador_service.dart';
 import 'package:thefive_planetaagua/widget/appbar.dart';
 import 'package:thefive_planetaagua/widget/ph.dart';
 import 'package:thefive_planetaagua/widget/relatorio_tempo_real.dart';
 import 'package:thefive_planetaagua/widget/the_five.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
+
 
 class IndicadorRealPH extends StatefulWidget {
   @override
@@ -13,16 +14,25 @@ class IndicadorRealPH extends StatefulWidget {
 }
 
 class _IndicadorRealPHState extends State<IndicadorRealPH> {
+  
   final List<IndicadorSeries> dados = [
-    IndicadorSeries(month: '2008', ph: 1),
-    IndicadorSeries(month: '2009', ph: 3),
-    IndicadorSeries(month: '2010', ph: 4),
-    IndicadorSeries(month: '2011', ph: 7),
-    IndicadorSeries(month: '2012', ph: 5),
+    IndicadorSeries(year: '1955', dado: 3, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
+    IndicadorSeries(year: '1965', dado: 2, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '1975', dado: 4, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
+    IndicadorSeries(year: '1985', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '1995', dado: 6, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
+    IndicadorSeries(year: '2005', dado: 7, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2010', dado: 5, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
+    IndicadorSeries(year: '2015', dado: 8, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+    IndicadorSeries(year: '2020', dado: 9, barColor: charts.ColorUtil.fromDartColor(Colors.blue.shade300)),
   ];
 
-  List<IndicadorSeries> getAll() {
-    List<IndicadorSeries> _list;
+/*
+
+  TENTATIVA DE PUXAR DADOS DA API
+
+  List<IndicadorSeries> getAll1() {
+    List<IndicadorSeries> _list = [];
     Future<List<IndicadorSeries>> listFuture;
     listFuture = IndicadoresService().findAllAsync();
     listFuture.then((value) {
@@ -33,15 +43,54 @@ class _IndicadorRealPHState extends State<IndicadorRealPH> {
 
   List<IndicadorSeries> dadosApi = [];
 
-  @override
-  Widget build(BuildContext context) {
+  var sair = false;
+  var controle = 0;
+
+  List<IndicadorSeries> _list = [];
+
+  List<IndicadorSeries> getAll() {
+   
+    Future<List<IndicadorSeries>> listFuture;
+    listFuture = IndicadoresService().findAllAsync();
+    listFuture.then((value) {
+      if (value != null) sair = false;
+      print(sair);
+
+      for (var item in value) {
+        _list.add(item);
+      }
+      
+      while (sair == false) {
+        _list.add(value[controle]);
+        if (value[controle] == null) {
+          sair = true;
+          controle++;
+        }
+      }
+      //value.forEach((item) => _list.add(item));
+      //if (value != null) _list = value;
+    });
+    print(_list);
+    print('-------');
     print(dados);
-    dadosApi = getAll();
+    return _list == null ? [] : _list;
+  }
+
+  
+
+  @override
+  Widget buildNew(BuildContext context) {
+    print(dados);
+   
 
     return IndicadorCharts(dados: dados);
   }
+  */
 
-  Widget buildOld(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
+   // dadosApi = getAll();
+
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBarCustomizada(
@@ -73,10 +122,14 @@ class _IndicadorRealPHState extends State<IndicadorRealPH> {
                 ),
                 RelatorioPH(), // indicador
 
-                Center(child: IndicadorCharts(dados: dados),),
-                
+                Center(
+                  child: IndicadorCharts(dados: dados),
+                ),
 
-                TheFive(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 35),
+                  child: TheFive(),
+                ),
               ],
             ),
           ),
